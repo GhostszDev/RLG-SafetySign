@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
+const cors = require('cors');
+
+const corsOptions = {
+    origin: "*"
+}
 
 // GET method route
-router.get('/', async (req, res) => {
+router.get('/', cors(corsOptions), async (req, res) => {
     await fs.readFile('JSON/data.JSON', 'utf8', (err, jsonData) => {
 
         if (err) {
@@ -23,7 +28,7 @@ router.get('/', async (req, res) => {
 })
 
 // POST method route
-router.post('/', async (req, res) => {
+router.post('/', cors(corsOptions), async (req, res) => {
 
     const newDate = {
         date: req.body.date

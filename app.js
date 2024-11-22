@@ -3,17 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
+const corsOptions = {
+  origin: "*"
+}
 
 var indexRouter = require('./routes/index');
 var dataManagerRouter = require('./routes/dataManager');
 
 var app = express();
 
-app.use((req, res, next) => { 
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader('Access-Control-Allow-Methods', '*');
-  res.setHeader("Access-Control-Allow-Headers", "*");
-  next(); });
+app.use(cors(corsOptions));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
