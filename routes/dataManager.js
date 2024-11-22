@@ -4,7 +4,7 @@ const fs = require('fs');
 const cors = require('cors');
 
 const corsOptions = {
-    origin: "https://ghostszdev.github.io/"
+    origin: "https://ghostszdev.github.io"
 }
 
 // GET method route
