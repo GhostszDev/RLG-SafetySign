@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 const corsOptions = {
-  origin: "https://ghostszdev.github.io/"
+  origin: "https://ghostszdev.github.io"
 }
 
 var indexRouter = require('./routes/index');
