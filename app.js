@@ -10,9 +10,9 @@ var dataManagerRouter = require('./routes/dataManager');
 var app = express();
 
 app.use((req, res, next) => { 
-  res.header('Access-Control-Allow-Origin', 'https://ghostszdev.github.io'); 
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'); 
-  res.header('Access-Control-Allow-Headers', 'Content-Type'); 
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Methods', '*');
+  res.setHeader("Access-Control-Allow-Headers", "*");
   next(); });
 
 // view engine setup
