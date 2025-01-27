@@ -15,8 +15,4 @@ app.get('/', (req, res) => {
 
 app.use('/dataManager', dataManagerRouter);
 
-module.exports = {
-    mode: 'production'
-};
-
 module.exports.handler = serverless(app);
