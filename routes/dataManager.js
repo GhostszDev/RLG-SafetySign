@@ -12,14 +12,15 @@ router.get('/', cors(corsOptions), async (req, res) => {
     await fs.readFile('JSON/data.JSON', 'utf8', (err, jsonData) => {
 
         if (err) {
-            console.error('Error: ', err)
+            console.error('Error 35: ', err);
         } else {
             try {
                 const data = JSON.parse(jsonData);
                 console.log(jsonData);
+                res.status(200);
                 res.send(data);
             } catch (err) {
-                console.error('Error: ', err);
+                console.error('Error 303: ', err);
             }
         }
     });
