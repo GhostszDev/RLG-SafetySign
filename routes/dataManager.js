@@ -12,6 +12,7 @@ router.get('/', cors(corsOptions), async (req, res) => {
     await fs.readFile('JSON/data.JSON', 'utf8', (err, jsonData) => {
 
         if (err) {
+            res.status(400);
             console.error('Error 35: ', err);
         } else {
             try {
@@ -20,6 +21,7 @@ router.get('/', cors(corsOptions), async (req, res) => {
                 res.status(200);
                 res.send(data);
             } catch (err) {
+                res.status(400);
                 console.error('Error 303: ', err);
             }
         }
