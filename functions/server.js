@@ -4,7 +4,7 @@ const express = require('express');
 const corsOptions = {
     origin: "https://ghostszdev.github.io"
 }
-var dataManagerRouter = require('./routes/dataManager');
+var dataManagerRouter = require('../routes/dataManager');
 const app = express();
 
 app.use(cors(corsOptions));
