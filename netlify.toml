@@ -1,7 +1,7 @@
 [build]
-functions = "/"
+functions = "functions"
 
 [[redirects]]
 from = "/*"
-to = "/.netlify/app"
+to = "/.netlify/functions/server"
 status = 200
